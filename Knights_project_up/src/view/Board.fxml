@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="477.0" prefWidth="641.0" style="-fx-background-color: F8F8F8; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControlBoard">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="54.0" prefWidth="651.0" style="-fx-background-color: #D19556;">
+         <children>
+            <Text fill="WHITE" layoutX="9.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player Name:">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="253.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="473.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="471.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="playerNameLabel" layoutX="115.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="86.33336997032166" />
+            <Text fx:id="timer" layoutX="276.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <TextField fx:id="scoreText" layoutX="518.0" layoutY="26.0" prefHeight="25.0" prefWidth="37.0" />
+            <Text fx:id="levelText" layoutX="520.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="69.36328148469329" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="gameRulesBtn" layoutX="548.0" layoutY="366.0" mnemonicParsing="false" onAction="#gameRulesBtnOnAction" prefHeight="22.0" prefWidth="69.0" style="-fx-background-color: #D19556;" text="Rules" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Black" size="12.0" />
+         </font>
+      </Button>
+      <GridPane fx:id="gridPane" layoutX="146.0" layoutY="65.0" prefHeight="319.0" prefWidth="330.0" style="-fx-border-color: #9B5E0F; -fx-border-width: 4;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane fx:id="pane00" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;">
+               <children>
+                  <Text fx:id="horseCHESS" layoutX="5.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="♞" wrappingWidth="29.000007659196854">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <Pane fx:id="pane10" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="1" />
+            <Pane fx:id="pane20" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="2" />
+            <Pane fx:id="pane30" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="3" />
+            <Pane fx:id="pane40" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="4" />
+            <Pane fx:id="pane50" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="5" />
+            <Pane fx:id="pane60" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="6" />
+            <Pane fx:id="pane70" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="7">
+               <children>
+                  <Text fx:id="kingCHESS" layoutX="4.0" layoutY="33.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="♛">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="queenChess" layoutX="7.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="♚" wrappingWidth="29.000007659196854">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <Pane fx:id="pane01" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.rowIndex="1" />
+            <Pane fx:id="pane11" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Pane fx:id="pane21" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Pane fx:id="pane31" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Pane fx:id="pane41" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Pane fx:id="pane51" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Pane fx:id="pane61" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Pane fx:id="pane71" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Pane fx:id="pane02" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.rowIndex="2" />
+            <Pane fx:id="pane12" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Pane fx:id="pane22" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Pane fx:id="pane32" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Pane fx:id="pane42" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Pane fx:id="pane52" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Pane fx:id="pane62" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Pane fx:id="pane72" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Pane fx:id="pane03" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.rowIndex="3" />
+            <Pane fx:id="pane13" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Pane fx:id="pane23" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Pane fx:id="pane33" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Pane fx:id="pane43" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Pane fx:id="pane53" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Pane fx:id="pane63" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Pane fx:id="pane73" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Pane fx:id="pane04" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.rowIndex="4" />
+            <Pane fx:id="pane14" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Pane fx:id="pane24" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Pane fx:id="pane34" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Pane fx:id="pane44" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Pane fx:id="pane54" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Pane fx:id="pane64" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Pane fx:id="pane74" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Pane fx:id="pane75" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <Pane fx:id="pane65" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Pane fx:id="pane55" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Pane fx:id="pane45" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Pane fx:id="pane35" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Pane fx:id="pane25" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Pane fx:id="pane15" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Pane fx:id="pane05" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.rowIndex="5" />
+            <Pane fx:id="pane06" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.rowIndex="6" />
+            <Pane fx:id="pane16" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Pane fx:id="pane26" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Pane fx:id="pane36" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Pane fx:id="pane46" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Pane fx:id="pane56" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Pane fx:id="pane66" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Pane fx:id="pane76" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <Pane fx:id="pane07" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.rowIndex="7" />
+            <Pane fx:id="pane17" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Pane fx:id="pane27" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Pane fx:id="pane37" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Pane fx:id="pane47" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Pane fx:id="pane57" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Pane fx:id="pane67" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D19556;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <Pane fx:id="pane77" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EAD1A8;" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Text fill="#9b5e0f" layoutX="162.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a           b           c          d          e          f          g          h   " wrappingWidth="340.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="162.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a           b           c          d          e          f          g          h   " wrappingWidth="340.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="134.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="134.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="134.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="134.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="134.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="134.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="134.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="134.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="480.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="480.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="480.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="480.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="480.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="480.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="480.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#9b5e0f" layoutX="480.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="14.6748046875">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Text>
+      <Pane fx:id="gameRulesPane" layoutX="94.0" layoutY="88.0" prefHeight="267.0" prefWidth="443.0" style="-fx-background-color: #FAFDF3;" visible="false">
+         <children>
+            <AnchorPane prefHeight="39.0" prefWidth="443.0" style="-fx-background-color: #D19556;">
+               <children>
+                  <Text fill="WHITE" layoutX="159.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME RULES" wrappingWidth="214.5712890625">
+                     <font>
+                        <Font name="Bodoni MT Black" size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="closeGameRulesBtn" layoutX="395.0" layoutY="2.0" mnemonicParsing="false" onAction="#closeGameRulesOnAction" prefHeight="31.0" prefWidth="47.0" style="-fx-background-color: #D19556;" text="🗙" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <TextArea accessibleRole="TEXT" cache="true" editable="false" layoutX="8.0" layoutY="45.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="214.0" prefWidth="428.0" style="-fx-background-color: #D19556; -fx-border-color: #D19556; -fx-border-width: 0.3; -fx-border-radius: 100;" text="&#10;1. The horse can move from a straight square to a diagonalsquare or from a diagonal square to a straight square.&#10;2. Every time you visit a new Square you get a point, andeverytime you visit a visited Square you will lose points.&#10;3. If you step on a square where the Queen or the king standon it, you will lose the game!&#10;4. Meanwhile the game you will be asked questions, answeringit with the right answer will get you more points depends onhow hard it is, and answering it with wrong answer then youlose points.&#10;5. If you collect at least 200 points then you will get a prize.&#10;6. There is a limited time for every round you need to watchout!&#10;" wrapText="true">
+               <font>
+                  <Font name="Sitka Text" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextArea>
+         </children>
+      </Pane>
+      <Button fx:id="exitButton" layoutX="5.0" layoutY="60.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="24.0" prefWidth="69.0" style="-fx-background-color: #D19556;" text="🗙 Exit" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Black" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="startBTN" layoutX="25.0" layoutY="366.0" mnemonicParsing="false" onAction="#startGameFunc" prefHeight="22.0" prefWidth="69.0" style="-fx-background-color: #D19556;" text="start" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Black" size="12.0" />
+         </font>
+      </Button>
+      <Pane layoutX="122.0" layoutY="132.0" prefHeight="171.0" prefWidth="375.0" style="-fx-background-color: #EAD1A8; -fx-border-color: #AA4A44; -fx-border-width: 5;" visible="false">
+         <children>
+            <Text fill="#aa4a44" layoutX="107.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FAILED " wrappingWidth="154.66668701171875">
+               <font>
+                  <Font name="Bodoni MT Black" size="32.0" />
+               </font>
+            </Text>
+            <Text fill="#aa4a44" layoutX="249.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="☹" wrappingWidth="60.0">
+               <font>
+                  <Font name="Bodoni MT Black" size="54.0" />
+               </font>
+            </Text>
+            <Button layoutX="20.0" layoutY="118.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #4F7942;" text="🔁 Try again" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="210.0" layoutY="118.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #AA4A44;" text="🗙 Exit" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="#aa4a44" layoutX="99.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Score" wrappingWidth="182.0">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="122.0" layoutY="132.0" prefHeight="171.0" prefWidth="375.0" style="-fx-background-color: #EAD1A8; -fx-border-color: #4F7942; -fx-border-width: 5;" visible="false">
+         <children>
+            <Text fill="#4f7942" layoutX="56.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPLETED" wrappingWidth="240.00003051757812">
+               <font>
+                  <Font name="Bodoni MT Black" size="32.0" />
+               </font>
+            </Text>
+            <Text fill="#4f7942" layoutX="272.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="🏅" wrappingWidth="60.0">
+               <font>
+                  <Font name="Bodoni MT Black" size="54.0" />
+               </font>
+            </Text>
+            <Button layoutX="20.0" layoutY="118.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #4F7942;" text="⏭ Next Level" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="210.0" layoutY="118.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #AA4A44;" text="🗙 Exit" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="#4f7942" layoutX="99.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Score" wrappingWidth="182.0">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="122.0" layoutY="132.0" prefHeight="171.0" prefWidth="375.0" style="-fx-background-color: #EAD1A8; -fx-border-color: #4F7942; -fx-border-width: 5;" visible="false">
+         <children>
+            <Text fill="#4f7942" layoutX="83.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOU WON" wrappingWidth="240.00003051757812">
+               <font>
+                  <Font name="Bodoni MT Black" size="32.0" />
+               </font>
+            </Text>
+            <Text fill="#4f7942" layoutX="263.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="🏆" wrappingWidth="60.0">
+               <font>
+                  <Font name="Bodoni MT Black" size="47.0" />
+               </font>
+            </Text>
+            <Button layoutX="20.0" layoutY="118.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #4F7942;" text="▶ New Game" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="210.0" layoutY="118.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #AA4A44;" text="🗙 Exit" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="#4f7942" layoutX="99.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Score" wrappingWidth="182.0">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="99.0" layoutY="93.0" prefHeight="241.0" prefWidth="420.0" style="-fx-background-color: #EAD1A8; -fx-border-color: #484848; -fx-border-width: 5;" visible="false">
+         <children>
+            <Text fill="#484848" layoutX="100.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="❓ Select an answer " wrappingWidth="271.3333435058594">
+               <font>
+                  <Font name="Bodoni MT Black" size="22.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="12.0" layoutY="107.0" mnemonicParsing="false" text="RadioButton" />
+            <RadioButton layoutX="12.0" layoutY="142.0" mnemonicParsing="false" text="RadioButton" />
+            <RadioButton layoutX="12.0" layoutY="177.0" mnemonicParsing="false" text="RadioButton" />
+            <RadioButton layoutX="12.0" layoutY="72.0" mnemonicParsing="false" text="RadioButton" />
+            <Label layoutX="56.0" layoutY="44.0" prefHeight="17.0" prefWidth="330.0" text="LABEL FOR QUESTION" />
+            <Button layoutX="289.0" layoutY="201.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #484848;" text="Check Answer" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Text fx:id="alertMan" layoutX="74.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="534.6747637689114">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

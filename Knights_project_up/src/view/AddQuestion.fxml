@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="498.0" style="-fx-background-color: #beb493;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddQuestionSceneControll">
+   <children>
+      <ImageView fitHeight="388.0" fitWidth="312.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.7;">
+         <image>
+            <Image url="@WhatsApp%20Image%202022-12-03%20at%2020.37.55.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="160.0" layoutY="47.0" prefHeight="325.0" prefWidth="312.0" style="-fx-background-color: white; -fx-opacity: 0.7; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="question_text" layoutX="38.0" layoutY="51.0" prefHeight="25.0" prefWidth="255.0" promptText="Question Text" />
+            <TextField fx:id="answer1_text" layoutX="38.0" layoutY="80.0" prefHeight="25.0" prefWidth="255.0" promptText="Answer 1" />
+            <TextField fx:id="answer2_text" layoutX="38.0" layoutY="112.0" prefHeight="25.0" prefWidth="255.0" promptText="Answer 2" />
+            <TextField fx:id="answer3_text" layoutX="38.0" layoutY="142.0" prefHeight="25.0" prefWidth="255.0" promptText="Answer 3" />
+            <TextField fx:id="answer4_text" layoutX="38.0" layoutY="173.0" prefHeight="25.0" prefWidth="255.0" promptText="Answer 4" />
+            <ComboBox fx:id="diff_combo" layoutX="38.0" layoutY="231.0" prefHeight="28.0" prefWidth="255.0" promptText="Diffuclty" style="-fx-background-color: transparent; -fx-border-color: #e4e4e4;" />
+            <TextField fx:id="corr_answerText" layoutX="38.0" layoutY="204.0" prefHeight="25.0" prefWidth="255.0" promptText="Correct Answer Number" />
+            <Button fx:id="addButton" layoutX="76.0" layoutY="294.0" mnemonicParsing="false" onAction="#addQuestion" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #beb493; -fx-background-radius: 20;" text="Add " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Text fill="#696363" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please fill all the fields before you press Add :" wrappingWidth="190.13670349121094">
+               <font>
+                  <Font name="Eras Medium ITC" size="14.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="team_combo" layoutX="38.0" layoutY="262.0" prefHeight="28.0" prefWidth="255.0" promptText="team" style="-fx-background-color: transparent; -fx-border-color: #e4e4e4;" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#goHome" prefHeight="19.0" prefWidth="47.0" style="-fx-background-color: #beb493; -fx-background-radius: 20;" text="back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Text fill="#beb493" layoutX="60.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Question">
+         <font>
+            <Font name="Gabriola" size="55.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
